@@ -11,16 +11,20 @@ console.log(n1)
 
 //   Operador condicional (ternário) 
 
-x = 200
-y = 100
+x = 500
+y = 300
+if (x == y) {
+    console.log("true")
+}
+else {
+    console.log("false")
+}
 
-res = x >= y ? `${x} é maior!` : `${y} é maior!`
+const res = x >= y ? "1" : 2
 
-res1 = x >= y
-
-console.log(res1)
 console.log("operador condicional (ternário)")
 console.log(res)
+console.log(typeof(res))
 
 //   formatando Números
 
@@ -36,7 +40,7 @@ console.log(numero.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' 
 
 //   Organizando Numeros
 
-var nomes = [1, 3, 2, 5, 4, 7, 6, 8, 9,]; //   se houver dois digitos, o valor retornado, mas é incorrento.
-nomes.sort()
-console.log(nomes);
+var numeros = [1, 3, 2, 5, 4, 7, 6, 8, 9,]; //   se houver dois digitos, o valor retornado, mas é incorrento.
+
+console.log(numeros.sort());
 
