@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom-Teclado</title>
+    <style>
+       body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        color: rgb(247, 0, 82);
+        background-color: rgb(0, 0, 0);
+       }
+       .tela {
+        overflow: hidden;
+        position: relative;
+        height: 400px;
+        width: 400px;
+        margin-top: 50px;
+        border: 2px solid rgb(247, 0, 82);
+        background-color: rgb(14, 14, 14);
+        box-shadow: 0 0 3px rgb(255, 0, 85), inset 0 0 3px rgb(255, 0, 98);
+        
+       }
+       .usuario {
+        height: 10px;
+        width: 10px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        transform: translateX(0);
+        background-color: rgb(0, 255, 242);
+        box-shadow: 0 0 5px rgb(0, 255, 242), inset 0 0 5px rgb(0, 255, 242);
+       } 
+    </style>
+</head>
+<body>
+    <main>
+        <h1>DOM - Eventos com teclado</h1>
+        <div class="tela">
+            <div class="usuario">
+            </div>
+        </div>
+    </main>
+    <script>
+        var px=0
+        var py=0
+        document.addEventListener("keydown", function(event){
+            var eventos = event.key
+            var usuario = window.document.querySelector(".usuario")
+            if(eventos === "ArrowRight"){usuario.style.left = (px+=5) + "px"}
+            else if (eventos === "ArrowLeft"){usuario.style.left = (px-=5) + "px"}
+            else if (eventos === "ArrowUp"){usuario.style.top = (py-=5) + "px"}
+            else if (eventos === "ArrowDown"){usuario.style.top = (py+=5) + "px"}
+        })
+    </script>
+</body>
+</html>
