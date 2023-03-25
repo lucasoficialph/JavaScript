@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consult-IMC</title>
+    <link rel="stylesheet" href="../css/imc.css">
+</head>
+<body>
+    <main>
+        <form action="#" autocapitalize="off" method="get">      
+            <div class="boxImc">
+                <div class="boxImc_title">
+                    <h1>IMC calculator 🍉</h1>
+                </div>
+                <div class="boxImc_text">
+                    <p>O que é o IMC é o que significa?
+                        Criado no século 19 pelo matemático Lambert Quételet, o Índice de Massa Corporal, conhecido pela sigla IMC, é um cálculo simples que permite medir se alguém está ou não com o peso ideal.</p>
+                </div>
+                <div class="boxImc_calc">
+                    <div class="boxImc_inputs">
+                        <label for="peso">Peso: </label>
+                        <input type="text" value="" id="peso" max="700" required autocomplete="off">
+                    </div>
+                    <div class="boxImc_inputs">
+                        <label for="altura">Altura: </label>
+                        <input type="text" value="" id="altura" max="700" step="2" required autocomplete="off">
+                    </div>
+                    <button type="submit" id="calcular" onclick="calcularImc()">
+                        Calcular
+                    </button>
+                </div>
+                <span>
+                    <h1 id="meuImc">?</h1>
+                </span>
+            </div>
+    </form>
+    </main>
+</body>
+<script src="../js/imc.js" defer>
+</script>
+</html>

@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;}
+
+:root {
+    --corTitle: rgb(255, 123, 0);
+    --corBackgroundBoxImc: rgb(255, 255, 255);
+    --corBeckgroundMain: rgb(255, 156, 64);
+    --corTexto: rgb(49, 49, 49);
+    --corBorder: rgb(255, 115, 0);
+}
+
+body{
+    height: 100vh;
+    width: 100vw;}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(45deg, rgb(255, 128, 23), var(--corBeckgroundMain));}
+
+.boxImc {
+    position: relative;
+    box-sizing: border-box;
+    height: 400px;
+    width: 400px;
+    padding: 30px;
+    border-radius: 0 80px;
+    background-color: var(--corBackgroundBoxImc);
+    box-shadow: 2px 2px 5px rgba(102, 29, 0, 0.37);}
+
+.boxImc_title {
+    user-select: none;
+    text-align: center;
+    color: var(--corTitle)}
+
+.boxImc_text{
+    user-select: none;
+    padding: 20px 10px;
+    color: var(--corTexto)}
+
+.boxImc_calc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 120px;
+    width: 100%;
+    padding: 10px;}
+
+.boxImc_inputs {
+    padding: 5px 0;}
+
+.boxImc_inputs label {
+    user-select: none;
+    font-size: 1.5em;
+    color: var(--corTitle);}
+
+.boxImc_inputs input {
+    box-sizing: border-box;
+    height: 30px;
+    width: 100px;
+    padding: 5px;
+    outline: none;
+    color: var(--corTexto);
+    border-radius: 5px;
+    border: 1.9px solid var(--corBorder);
+    background-color: transparent;}
+
+#calcular {
+    position: absolute;
+    bottom: 15px;
+    left: 55%;
+    transform: translate(-50%);
+    height: 30px;
+    width: 300px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 3px;
+    border: 1.9px solid var(--corBorder);
+    font-size: 1em;
+    color: var(--corTexto);
+    background-color: transparent;}
+
+#calcular:hover {
+    letter-spacing: 0.1em;
+    transition: .2s ease-in-out;}
+
+span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 75px;
+    right: 50px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    animation: borda 1s alternate infinite ease-in-out;}
+
+@keyframes borda {
+    0%{border: 1px solid var(--corTitle);}
+    100%{border: 4px solid var(--corTitle)}
+}
+
+#meuImc {
+    user-select: none;
+    font-size: 2em;
+    color: var(--corTitle);
+    animation: meuImc 1s alternate infinite ease-in-out;}
+
+@keyframes meuImc {
+    0%{transform: scale(0.8);}
+    100%{transform: scale(1);}}
