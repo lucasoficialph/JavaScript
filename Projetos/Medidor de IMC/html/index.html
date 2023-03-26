@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consult-IMC</title>
+    <title>IMC Calculate</title>
     <link rel="stylesheet" href="../css/imc.css">
 </head>
 <body>
@@ -12,11 +12,11 @@
         <form action="#" autocapitalize="off" method="get">      
             <div class="boxImc">
                 <div class="boxImc_title">
-                    <h1>IMC calculator 🍉</h1>
+                    <h1>IMC Calculate 🍉</h1>
                 </div>
                 <div class="boxImc_text">
-                    <p>O que é o IMC é o que significa?
-                        Criado no século 19 pelo matemático Lambert Quételet, o Índice de Massa Corporal, conhecido pela sigla IMC, é um cálculo simples que permite medir se alguém está ou não com o peso ideal.</p>
+                    <p><strong>O que é o IMC e o que significa?</strong></p>
+                    <p>O Índice de Massa Corporal, conhecido pela sigla IMC, é um cálculo simples que permite medir se alguém está ou não com o peso ideal.</p>
                 </div>
                 <div class="boxImc_calc">
                     <div class="boxImc_inputs">
@@ -35,7 +35,40 @@
                     <h1 id="meuImc">?</h1>
                 </span>
             </div>
-    </form>
+        </form>
+        <table>
+            <thead>
+               <tr>
+                    <th colspan="2">Classificação de IMC</th>
+               </tr> 
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Menor de 18.5</td>
+                    <td>Peso baixo</td>
+                </tr>
+                <tr>
+                    <td>Entre 18.5 e 24.9</td>
+                    <td>Peso normal ou adequado</td>
+                </tr>
+                <tr>
+                    <td>Entre 25.0 e 29.9</td>
+                    <td>Sobrepeso</td>
+                </tr>
+                <tr>
+                    <td>Entre 30.0 e 34.9</td>
+                    <td>Obesidade Grau I</td>
+                </tr>
+                <tr>
+                    <td>Entre 35.0 e 39,9</td>
+                    <td>Obesedade Grau II</td>
+                </tr>
+                <tr>
+                    <td>Maior que 40.0</td>
+                    <td>Obesidade Grau III ou Mórbida</td>
+                </tr>
+            </tbody>
+        </table>
     </main>
 </body>
 <script src="../js/imc.js" defer>

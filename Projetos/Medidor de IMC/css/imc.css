@@ -9,41 +9,58 @@
 :root {
     --corTitle: rgb(255, 123, 0);
     --corBackgroundBoxImc: rgb(255, 255, 255);
-    --corBeckgroundMain: rgb(255, 156, 64);
+    --corBeckgroundMain: rgb(255, 100, 53);
     --corTexto: rgb(49, 49, 49);
     --corBorder: rgb(255, 115, 0);
+    --corBody: rgb(31, 31, 31);
+    --corMain: rgba(0, 0, 0, 0.596);
 }
 
 body{
-    height: 100vh;
-    width: 100vw;}
-
-main {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(45deg, rgb(255, 128, 23), var(--corBeckgroundMain));}
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 100vw;
+    background-color: var(--corMain);
+}
 
 .boxImc {
     position: relative;
     box-sizing: border-box;
     height: 400px;
-    width: 400px;
+    width: 350px;
     padding: 30px;
+    margin-right: 50px;
     border-radius: 0 80px;
     background-color: var(--corBackgroundBoxImc);
-    box-shadow: 2px 2px 5px rgba(102, 29, 0, 0.37);}
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.37);}
 
 .boxImc_title {
     user-select: none;
     text-align: center;
+    padding-bottom: 20px;
     color: var(--corTitle)}
 
-.boxImc_text{
+.boxImc_text {
+    padding-bottom: 15px;
+}
+
+.boxImc_text p{
+    font-size: .9em;
     user-select: none;
-    padding: 20px 10px;
+    padding: 5px 10px;
     color: var(--corTexto)}
 
 .boxImc_calc {
@@ -56,7 +73,7 @@ main {
     padding: 10px;}
 
 .boxImc_inputs {
-    padding: 5px 0;}
+    padding-top: 10px;}
 
 .boxImc_inputs label {
     user-select: none;
@@ -66,7 +83,7 @@ main {
 .boxImc_inputs input {
     box-sizing: border-box;
     height: 30px;
-    width: 100px;
+    width: 80px;
     padding: 5px;
     outline: none;
     color: var(--corTexto);
@@ -76,11 +93,11 @@ main {
 
 #calcular {
     position: absolute;
-    bottom: 15px;
+    bottom: 20px;
     left: 55%;
     transform: translate(-50%);
     height: 30px;
-    width: 300px;
+    width: 250px;
     cursor: pointer;
     user-select: none;
     border-radius: 3px;
@@ -98,8 +115,8 @@ span {
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 75px;
-    right: 50px;
+    bottom: 85px;
+    right: 30px;
     height: 80px;
     width: 80px;
     border-radius: 50%;
@@ -119,3 +136,35 @@ span {
 @keyframes meuImc {
     0%{transform: scale(0.8);}
     100%{transform: scale(1);}}
+
+table {
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: rgb(241, 241, 241);
+    font-family: 'Barlow', sans-serif;
+    border-collapse: collapse;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.37);
+}
+tbody > tr:nth-child(2n) {
+    background-color: rgb(228, 228, 228);
+} 
+thead {
+    font-size: 1.3em;
+    color: white;
+}
+thead tr {
+    background-color: rgb(255, 136, 0);
+}
+tr  {
+    user-select: none;
+    height: 50px;
+    background-color: rgb(240, 240, 240);
+}
+td {
+    font-weight: bold;
+    color: rgb(0, 105, 153);
+    padding-left: 20px;
+    text-align: start;
+    width: 220px;
+    font-size: .9em;
+}
