@@ -49,10 +49,25 @@ main {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.37);}
 
 .boxImc_title {
-    user-select: none;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     padding-bottom: 20px;
-    color: var(--corTitle)}
+}
+
+.boxImc_title h1 {
+    padding-right: 8px;
+    user-select: none;
+    color: var(--corTitle)
+}
+
+.boxImc_title img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px rgba(15, 15, 15, 0.26);
+}
 
 .boxImc_text {
     padding-bottom: 15px;
@@ -117,14 +132,13 @@ main {
     width: 250px;
     cursor: pointer;
     user-select: none;
-    border-radius: 3px;
+    border-radius: 10px;
     border: 1.9px solid var(--corBorder);
     font-size: 1em;
-    color: var(--corTexto);
-    background-color: transparent;}
+    color: var(--corBackgroundBoxImc);
+    background-color: var(--corTitle);}
 
 #calcular:hover {
-    letter-spacing: 0.1em;
     transition: .2s ease-in-out;}
 
 .meuImc {
