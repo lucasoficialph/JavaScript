@@ -21,17 +21,17 @@
                 <div class="boxImc_calc">
                     <div class="boxImc_inputs">
                         <label for="peso">Peso: </label>
-                        <input type="text" value="" id="peso" max="700" required autocomplete="off">
+                        <input type="text" value="" id="peso" maxlength="4" required autocomplete="off" onkeypress="mascaraPeso()"><span id="kg">kg</span>
                     </div>
                     <div class="boxImc_inputs">
                         <label for="altura">Altura: </label>
-                        <input type="text" value="" id="altura" max="700" step="2" required autocomplete="off">
+                        <input type="text" value="" id="altura" step="2" maxlength="4" required autocomplete="off" onkeypress="mascaraAltura()"><span id="cm">cm</span>
                     </div>
                     <button type="submit" id="calcular" onclick="calcularImc()">
                         Calcular
                     </button>
                 </div>
-                <span>
+                <span class="meuImc">
                     <h1 id="meuImc">?</h1>
                 </span>
             </div>

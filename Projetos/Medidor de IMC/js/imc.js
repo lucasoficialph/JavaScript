@@ -7,3 +7,13 @@ function calcularImc() {
     let meuImc = window.document.querySelector("#meuImc")
     meuImc.innerText = resultado
 }
+
+function mascaraPeso(){
+    let peso = document.querySelector("#peso")
+    if (peso.value.length == 2){peso.value += "."}
+}
+
+function mascaraAltura(){
+    let altura = document.querySelector("#altura")
+    if (altura.value.length == 1){altura.value += "."}
+}

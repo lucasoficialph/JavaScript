@@ -73,6 +73,8 @@ main {
     padding: 10px;}
 
 .boxImc_inputs {
+    position: relative;
+    display: inline-block;
     padding-top: 10px;}
 
 .boxImc_inputs label {
@@ -83,13 +85,27 @@ main {
 .boxImc_inputs input {
     box-sizing: border-box;
     height: 30px;
-    width: 80px;
+    width: 70px;
     padding: 5px;
     outline: none;
     color: var(--corTexto);
     border-radius: 5px;
     border: 1.9px solid var(--corBorder);
     background-color: transparent;}
+
+#kg {
+    position: absolute;
+    top: 18px;
+    left: 118px;
+    color: var(--corTitle);
+}
+
+#cm {
+    position: absolute;
+    top: 18px;
+    left: 121px;
+    color: var(--corTitle);
+}
 
 #calcular {
     position: absolute;
@@ -110,7 +126,7 @@ main {
     letter-spacing: 0.1em;
     transition: .2s ease-in-out;}
 
-span {
+.meuImc {
     display: flex;
     justify-content: center;
     align-items: center;
