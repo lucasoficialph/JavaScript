@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMC Calculate</title>
     <link rel="stylesheet" href="../css/imc.css">
+    <link rel="stylesheet" href="../css/imcMobile.css" media="screen and (orientation: portrait)">
 </head>
 <body>
     <main>
@@ -21,11 +22,11 @@
                 <div class="boxImc_calc">
                     <div class="boxImc_inputs">
                         <label for="peso">Peso: </label>
-                        <input type="text" value="" id="peso" maxlength="4" required autocomplete="off" onkeypress="mascaraPeso()"><span id="kg">kg</span>
+                        <input type="tel" value="" id="peso" maxlength="4" required autocomplete="off" onkeypress="mascaraPeso()" placeholder="XX.X"><span id="kg">kg</span>
                     </div>
                     <div class="boxImc_inputs">
                         <label for="altura">Altura: </label>
-                        <input type="text" value="" id="altura" step="2" maxlength="4" required autocomplete="off" onkeypress="mascaraAltura()"><span id="cm">cm</span>
+                        <input type="tel" value="" id="altura" maxlength="4" required autocomplete="off" onkeypress="mascaraAltura()" placeholder="X.XX"><span id="cm">cm</span>
                     </div>
                     <button type="submit" id="calcular" onclick="calcularImc()">
                         Calcular
@@ -43,27 +44,27 @@
                </tr> 
             </thead>
             <tbody>
-                <tr>
+                <tr id="linha1">
                     <td>Menor de 18.5</td>
                     <td>Peso baixo</td>
                 </tr>
-                <tr>
+                <tr id="linha2">
                     <td>Entre 18.5 e 24.9</td>
                     <td>Peso normal ou adequado</td>
                 </tr>
-                <tr>
+                <tr id="linha3">
                     <td>Entre 25.0 e 29.9</td>
                     <td>Sobrepeso</td>
                 </tr>
-                <tr>
+                <tr id="linha4">
                     <td>Entre 30.0 e 34.9</td>
                     <td>Obesidade Grau I</td>
                 </tr>
-                <tr>
+                <tr id="linha5">
                     <td>Entre 35.0 e 39,9</td>
                     <td>Obesedade Grau II</td>
                 </tr>
-                <tr>
+                <tr id="linha6">
                     <td>Maior que 40.0</td>
                     <td>Obesidade Grau III ou Mórbida</td>
                 </tr>

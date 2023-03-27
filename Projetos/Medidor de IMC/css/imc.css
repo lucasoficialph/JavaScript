@@ -13,7 +13,7 @@
     --corTexto: rgb(49, 49, 49);
     --corBorder: rgb(255, 115, 0);
     --corBody: rgb(31, 31, 31);
-    --corMain: rgba(0, 0, 0, 0.596);
+    --corMain: rgba(0, 0, 0, 0.418);
 }
 
 body{
@@ -31,8 +31,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 100vh;
     width: 100vw;
+    padding: 0 20px;
     background-color: var(--corMain);
 }
 
@@ -161,9 +162,6 @@ table {
     border-collapse: collapse;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.37);
 }
-tbody > tr:nth-child(2n) {
-    background-color: rgb(228, 228, 228);
-} 
 thead {
     font-size: 1.3em;
     color: white;
@@ -179,8 +177,28 @@ tr  {
 td {
     font-weight: bold;
     color: rgb(0, 105, 153);
-    padding-left: 20px;
+    padding-left: 15px;
+    padding-right: 5px;
     text-align: start;
     width: 220px;
     font-size: .9em;
+}
+
+#linha1 {
+    background-color: transparent;
+}
+#linha2 {
+    background-color: transparent;
+}
+#linha3 {
+    background-color: transparent;
+}
+#linha4 {
+    background-color: transparent;
+}
+#linha5 {
+    background-color: transparent;
+}
+#linha6 {
+    background-color: transparent;
 }

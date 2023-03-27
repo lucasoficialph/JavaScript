@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+    width: 100vw;
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+    background-color: var(--corMain);
+}
+
+.boxImc {
+    position: relative;
+    box-sizing: border-box;
+    height: 400px;
+    width: 350px;
+    padding: 30px;
+    margin: 0;
+    border-radius: 0 80px;
+    background-color: var(--corBackgroundBoxImc);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.37);}
+
+    table {
+        margin-top: 50px;
+        overflow: hidden;
+        border-radius: 20px;
+        background-color: rgb(241, 241, 241);
+        font-family: 'Barlow', sans-serif;
+        border-collapse: collapse;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.37);
+    }
+
+    tr  {
+        user-select: none;
+        height: 60px;
+        background-color: rgb(240, 240, 240);
+    }
+    td {
+        box-sizing: border-box;
+        font-weight: bold;
+        color: rgb(0, 105, 153);
+        padding-left: 20px;
+        text-align: start;
+        width: 175px;
+        font-size: .9em;
+    }
