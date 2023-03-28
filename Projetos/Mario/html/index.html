@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <main class="conteudo">
+        <div class="janelaMario">
+            <div class="paisagem">
+                <div class="nuvens">
+                    <img src="../img/nuvens.png" alt="Nuvens">
+                </div>
+                <div class="cano">
+                    <img src="../img/cano.png" alt="Cano">
+                </div>
+                <div class="marioCorrendo">
+                    <img src="../img/mario correndo.gif" alt="Mario Correndo" onkeydown="marioPula()" onkeyup="marioNaoPula()">
+                </div>
+            </div>
+            <div class="terra"></div>
+        </div>
+    </main>
+</body>
+<script src="../js/logica.js">
+</script>
+</html>
