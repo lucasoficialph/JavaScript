@@ -17,6 +17,7 @@
 }
 
 body{
+    overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,6 +29,7 @@ body{
 }
 
 main {
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,13 +48,14 @@ main {
     margin-right: 50px;
     border-radius: 0 80px;
     background-color: var(--corBackgroundBoxImc);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.37);}
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.37);
+    transition: .3s;
+}
 
 .boxImc_title {
     display: flex;
     justify-content: center;
     align-items: center;
-    
     padding-bottom: 20px;
 }
 
@@ -187,6 +190,7 @@ tr  {
     user-select: none;
     height: 50px;
     background-color: rgb(240, 240, 240);
+    transition: .3s;
 }
 td {
     font-weight: bold;
@@ -196,6 +200,7 @@ td {
     text-align: start;
     width: 220px;
     font-size: .9em;
+    transition: .3s;
 }
 
 #linha1 {
@@ -215,4 +220,49 @@ td {
 }
 #linha6 {
     background-color: transparent;
+}
+
+@media screen and (max-width: 800px){
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 900px;
+        width: 100vw;
+        background-image: url(../img/background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    main {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: center;
+        height: 100%;
+        width: 100vw;
+        background-color: var(--corMain);
+    }
+    .boxImc {
+        position: relative;
+        box-sizing: border-box;
+        height: 400px;
+        width: 350px;
+        padding: 30px;
+        margin: 0;
+        border-radius: 0 80px;
+        background-color: var(--corBackgroundBoxImc);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.37);
+        transition: .3s;
+    }
+    table {
+        margin-top: 50px;
+        overflow: hidden;
+        border-radius: 20px;
+        background-color: rgb(241, 241, 241);
+        font-family: 'Barlow', sans-serif;
+        border-collapse: collapse;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.37);
+        transition: .3s;
+    }
 }
