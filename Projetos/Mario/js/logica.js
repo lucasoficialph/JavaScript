@@ -3,7 +3,7 @@ document.addEventListener("keydown", function(event){
     let eventos = event.key
     if(eventos === "ArrowUp"){
         mario.classList.add("marioPula")
-        setTimeout(removeClass, 550)
+        setTimeout(removeClass, 400)
     }
     console.log(eventos)
 })
@@ -13,5 +13,6 @@ function removeClass(){
 }
 
 function impactoCano(){
-    
+    eventos = MutationObserver.observer(document.querySelector(".cano"))
+    console.log(eventos)
 }

@@ -85,15 +85,16 @@ body {
     left: 10px;
     bottom: 0;
     width: 100px;
-    
+    z-index: 1;
 }
 
-.cano img {
+#cano {
     position: absolute;
     right: -90px;
     bottom: 0;
     width: 70px;
-    animation: cano 2.5s infinite linear;
+    animation: cano 1.3s infinite linear;
+    z-index: 2;
 }
 
 .terra {
@@ -125,7 +126,7 @@ body {
 }
 
 .marioPula {
-    animation: marioPula 550ms ease-in-out;
+    animation: marioPula 400ms ease-in-out;
 }
 
 @keyframes marioPula {
