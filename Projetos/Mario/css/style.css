@@ -30,6 +30,22 @@ body {
     box-shadow: 0 0 10px black;
 }
 
+.menu {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.menu img {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 35px;
+    z-index: 1;
+    border-radius: 10px;
+    background-color: rgb(83, 14, 12);
+}
+
 .paisagem {
     position: absolute;
     height: calc(100% - 120px);
@@ -45,19 +61,39 @@ body {
     animation: nuvensPassando 15s infinite linear;
 }
 
-.marioCorrendo img{
+.nuvens1 img {
+    position: absolute;
+    right: -400px;
+    top: 20px;
+    width: 170px;
+    animation: nuvensPassando 15s infinite linear;
+    animation-delay: 7s;
+}
+
+.passaro img {
+    position: absolute;
+    right: -400px;
+    top: 100px;
+    width: 50px;
+    transform: scaleX(-1);
+    animation: nuvensPassando 10s infinite linear;
+    animation-delay: 5s;
+}
+
+#marioCorrendo{
     position: absolute;
     left: 10px;
     bottom: 0;
     width: 100px;
+    
 }
 
 .cano img {
     position: absolute;
     right: -90px;
     bottom: 0;
-    width: 90px;
-    animation: cano 3s infinite linear;
+    width: 70px;
+    animation: cano 2.5s infinite linear;
 }
 
 .terra {
@@ -88,12 +124,22 @@ body {
     }
 }
 
+.marioPula {
+    animation: marioPula 550ms ease-in-out;
+}
+
 @keyframes marioPula {
     0% {
         bottom: 0px
     }
+    40% {
+        bottom: 160px
+    }
     50% {
-        bottom: 90px
+        bottom: 170px
+    }
+    60% {
+        bottom: 160px
     }
     100% {
         bottom: 0px
