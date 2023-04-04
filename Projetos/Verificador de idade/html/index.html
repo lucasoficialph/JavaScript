@@ -13,30 +13,37 @@
         <div class="box_verificador">
             <div class="formulario">
                 <div class="nacimento">
-                    <label for="datanacimento">Ano de Nacimento:</label>
-                    <input id="dataNacimento" type="number">
+                    <label for="dataNacimento">Ano de Nacimento:</label>
+                    <input id="dataNacimento" type="number" required>
                 </div>
                 <div class="sexo">
-                    <label for="">Sexo:</label>
-                    <input type="radio" name="sexo" id="sexoMasculino">
-                    <input type="radio" name="sexo" id="sexoFeminino">
+                    <fieldset>
+                        <div class="caixaSexo">
+                            <p>Masculino</p>
+                            <input type="radio" name="check" id="sexoMasculino">
+                        </div>
+                        <div class="caixaSexo">
+                            <p>Feminino</p>
+                            <input type="radio" name="check" id="sexoFeminino">
+                        </div>
+                    </fieldset> 
                 </div>
-                <button type="button">Enviar</button>
+                <button type="button" onclick="resultado()">Enviar</button>
             </div>
             <div class="resultado">
                 <p>Resultado</p>
                 <div class="imagem">
-                    <img id="idosa" src="../img/velha.png">
+                    <img id="idosa" src="../img/idosa.png">
                     <img id="idoso" src="../img/idoso.png">
-                    <img id="" src="../img/">
-                    <img id="" src="../img/">
-                    <img id="" src="../img/">
-                    <img id="" src="../img/">
+                    <img id="mulher" src="../img/mulher.png">
+                    <img id="homem" src="../img/homem.png">
+                    <img id="jovenFeminina" src="../img/joven-feminino.png">
+                    <img id="jovenMasculino" src="../img/joven-masculino.png">
                 </div>
             </div>
         </div>
     </main>
-    <script src="../js/script.js">
+    <script src="../js/script.js" defer>
     </script>
 </body>
 </html>
