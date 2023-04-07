@@ -1,8 +1,14 @@
 const express = require("express")
 const app = express()
 
+const db = require("./models/db")
+
 app.get("/", async(req, res) => {
-    res.send("Bem-Vindo!")
+    res.sendFile(__dirname + "/html/index.html")
+})
+
+app.get("/sobre", async(req, res) => {
+    res.sendfile(__dirname + "/html/sobre.html")
 })
 
 app.listen(8080, () => {
