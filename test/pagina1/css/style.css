@@ -1,0 +1,362 @@
+/*#########################################*/
+/*#########################################*/
+/*#####   -CONFIGURAÇÕES GERAIS-   ########*/
+/*#########################################*/
+/*#########################################*/
+
+@charset "UTF-8";
+
+* {
+    list-style-type: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --perfilDeCor_cabecalho: tranparent;
+    --perfilDeCor_logo_principal: rgb(255, 255, 255);
+    --perfilDeCor_texto_menu_principal: rgb(255, 255, 255);
+    --perfilDeCor_afeter_menu: rgb(255, 255, 255);
+    --perfilDeCor_corTexto_rea1: rgb(255, 255, 255);
+    --perfilDeCor_corButton_rea1: rgb(0, 162, 255);
+    --perfilDeCor_corTextButton_rea1: rgb(223, 223, 223);
+
+}
+
+@font-face {
+    font-family: media;
+    src: url(../font/social\ media.ttf);
+}
+
+body {
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../img/background1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#conteudo {
+    position: relative;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 30px;
+    width: 100vw;
+    height: 600px;
+}
+
+/*#########################################*/
+/*#########################################*/
+/*############   -CABEÇALHO-    ###########*/
+/*#########################################*/
+/*#########################################*/
+
+
+#cabecalho {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    background-color: var(--perfilDeCor_cabecalho);
+    user-select: none;
+}
+
+.logo_principal{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 100px;
+}
+
+.logo_principal a { 
+    font-size: 2em;
+    color: var(--perfilDeCor_logo_principal);
+}
+
+.agrupando_menu_redesSociais {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 150px;
+}
+
+.menu_principal ul { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    width: 400px;
+}
+
+.menu_principal li {
+    position: relative;
+    padding: 3px 3px;
+}
+
+.menu_principal a {
+    font-size: 1.2em;
+    color: var(--perfilDeCor_texto_menu_principal);
+}
+
+.menu_principal a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--perfilDeCor_afeter_menu);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.459);
+}
+
+.menu_principal a:hover::after {
+    transition: .3s ease-in-out;
+    width: 100%;
+}
+
+.lupa > img {
+    width: 25px;
+    cursor: pointer;
+}
+
+.redes_sociais {
+    padding-left: 50px;
+}
+
+.redes_sociais ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: media;
+    width: 240px;
+}
+
+.redes_sociais li {
+    font-family: media;
+}
+
+.redes_sociais a {
+    font-size: 1.6em;
+    font-family: media;
+    color: white;
+}
+
+/*#########################################*/
+/*#########################################*/
+/*############   -AREA1-    ###########*/
+/*#########################################*/
+/*#########################################*/
+
+.area1 {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    display: inline-block;
+    height: 600px;
+    width: 500px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 600px;
+    width: 500px;
+}
+
+.title h4 {
+    padding-bottom: 18px;
+    text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.473);
+    color: var(--perfilDeCor_corTexto_rea1);
+}
+
+.title h1 {
+    width: 500px;
+    padding-bottom: 20px;
+    font-size: 3.5em;
+    text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.301);
+    color: var(--perfilDeCor_corTexto_rea1);
+}
+
+.title p {
+    padding-bottom: 30px;
+    text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.473);
+    color: var(--perfilDeCor_corTexto_rea1);
+}
+
+.title button {
+    height: 35px;
+    width: 140px;
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    color: var(--perfilDeCor_corTextButton_rea1);
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.459);
+    background-color: var(--perfilDeCor_corButton_rea1);
+    box-shadow: 2px 2px 5px rgb(0, 0, 0), inset 0px 0px 5px rgb(0, 102, 255) ;
+    user-select: none;
+    cursor: pointer;
+}
+
+/*#########################################*/
+/*#########################################*/
+/*############   -AREA2-    ###########*/
+/*#########################################*/
+/*#########################################*/
+
+.area2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 600px;
+    width: calc(100% - 600px);
+    user-select: none;
+}
+
+.carrosel {
+    overflow: hidden;
+    position: absolute;
+    top: 58%;
+    left: 50px;
+    transform: translate(0, -50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+}
+
+.opcao1 {
+    position: relative;
+    height: 310px;
+    width: 230px;
+    border-radius: 20px;
+    background-color: gold;background-image: url(../img/fps.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.432), inset 0px 0px 5px rgba(0, 0, 0, 0.432);
+    cursor: pointer;
+}
+
+.opcao1 h2 {
+    font-size: 2.3em;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    color: white;
+}
+
+.opcao2 {
+    position: relative;
+    height: 310px;
+    width: 230px;
+    border-radius: 20px;
+    background-color: rgb(0, 183, 255);
+    background-image: url(../img/rpg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.432), inset 0px 0px 5px rgba(0, 0, 0, 0.432);
+    cursor: pointer;
+}
+
+.opcao2 h2 {
+    font-size: 2.3em;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    color: white;
+}
+
+
+.opcao3 {
+    position: relative;
+    height: 310px;
+    width: 230px;
+    border-radius: 20px;
+    background-color: rgb(0, 183, 255);
+    background-image: url(../img/corrida.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.432), inset 0px 0px 5px rgba(0, 0, 0, 0.432);
+    cursor: pointer;
+}
+
+.opcao3 h2 {
+    font-size: 2.3em;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    color: white;
+}
+
+.bolinhas {
+    position: absolute;
+    top: 27%;
+    left: 40px;
+    height: 250px;
+    width: 250px;
+    opacity: 0.8;
+}
+
+.bolinhas img {
+    width: 200px;
+}
+
+.range {
+    position: absolute;
+    bottom: 0px;
+    left: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 590px;
+}
+
+.range_img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+}
+
+#seta1 {
+    transform-origin: center;
+    rotate: -90deg;
+    width: 45px;
+    cursor: pointer;
+}
+
+#seta2 {
+    transform-origin: center;
+    rotate: 90deg;
+    width: 45px;
+    cursor: pointer;
+}
+
+.range hr {
+    height: 1px;
+    width: 400px;
+    border: none;
+    background-color: white;
+    box-shadow: 1px 1px 5px black;
+}
+
+.range h1 {
+    font-size: 2.3em;
+    color: white;
+}
