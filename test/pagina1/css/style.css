@@ -581,3 +581,33 @@ html, body {
         width: 50%;
     }
  }
+
+ @media screen and (max-width: 550px) {
+    .title{
+        width: 350px;
+    }
+    .title > h1{
+        font-size: 2.8em;
+    }
+ }
+
+ @media screen and (max-width: 430px) {
+    .logo_principal{
+        left: 20px;
+    }
+    .area1{
+        left: 20px;
+    }
+    .title{
+        width: 320px;
+    }
+    .title > h1{
+        font-size: 2.3em;
+    }
+    .carrosel{
+        left: 10px;
+    }
+    .range{
+        left: 20px;
+    }
+ }
