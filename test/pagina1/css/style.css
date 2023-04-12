@@ -34,7 +34,7 @@ html, body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-    height: 1000px;
+    height: 900px;
     width: 100vw;
     background-image: url(../img/background1.jpg);
     background-size: cover;
@@ -276,6 +276,7 @@ html, body {
     justify-content: center;
     height: 600px;
     width: 500px;
+    transition: all .2s ease-in-out;
 }
 
 .title h4 {
@@ -290,12 +291,14 @@ html, body {
     font-size: 3.5em;
     text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.301);
     color: var(--perfilDeCor_corTexto_rea1);
+    transition: all .2s ease-in-out;
 }
 
 .title p {
     padding-bottom: 30px;
     text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.473);
     color: var(--perfilDeCor_corTexto_rea1);
+    transition: all .2s ease-in-out;
 }
 
 .title button {
@@ -349,6 +352,7 @@ html, body {
     align-items: center;
     max-width: 900px;
     height: 350px;
+    transition: all .2s ease-in-out;
 }
 
 .animacao_opcao { 
