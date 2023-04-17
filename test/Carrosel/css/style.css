@@ -1,0 +1,179 @@
+/*########################################*/
+/*########################################*/
+/*############  CONFI GERAL  #############*/
+/*########################################*/
+/*########################################*/
+
+@charset "UTF-8";
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+}
+
+/*########################################*/
+/*########################################*/
+/*##############  CABEÇALHO  #############*/
+/*########################################*/
+/*########################################*/
+
+
+#header-conteiner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    padding: 0 20px;
+    background-color: rgb(16, 34, 39);
+    box-shadow: 0px 0px 10px 10px rgb(0, 0, 0);
+}
+
+.header-logo a {
+    font-size: 2em;
+    color: rgb(28, 211, 171);
+}
+
+#header-navbar ul {
+    display: flex;
+}
+
+#header-navbar li {
+    padding: 0 15px;
+}
+
+#header-navbar a {
+    position: relative;
+    padding: 5px 5px;
+    font-size: 1em;
+    color: rgb(28, 211, 171);
+}
+
+#header-navbar-home::after{
+    content: "Home";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(28, 211, 171);
+    transition: all .2s ease-in-out;
+}
+
+#header-navbar-home:hover::after{
+    height: 100%;
+    color: rgb(16, 34, 39);
+}
+
+#header-navbar-Project::after{
+    content: "Project";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(28, 211, 171);
+    transition: all .2s ease-in-out;
+}
+
+#header-navbar-Project:hover::after{
+    height: 100%;
+    color: rgb(16, 34, 39);
+}
+
+#header-navbar-Contact::after{
+    content: "Contact";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(28, 211, 171);
+    transition: all .2s ease-in-out;
+}
+
+#header-navbar-Contact:hover::after{
+    height: 100%;
+    color: rgb(16, 34, 39);
+}
+
+/*########################################*/
+/*########################################*/
+/*##############  CONTEUDO  ##############*/
+/*########################################*/
+/*########################################*/
+
+#main-conteiner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 60px);
+    width: 100%;
+    padding: 50px 50px 10px 50px; 
+    background-color: rgb(6, 25, 31);
+}
+
+.projetos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 0 50px 0;
+}
+
+#main-conteiner hr {
+    height: 1px;
+    width: 100%;
+    background-color: rgb(0, 167, 130);
+    box-shadow: 1px 1px 10px rgb(25, 70, 64);
+}
+
+#main-conteiner h1 {
+    padding: 0 8px;
+    color: rgb(28, 211, 171);
+}
+
+#areas {
+    display: flex;
+    gap: 50px;
+    height: 90%;
+    width: 100%;
+}
+
+#area1 {
+    height: 70%;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgb(25, 70, 64);
+}
+
+#area2 {
+    height: 70%;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgb(25, 70, 64);
+}
