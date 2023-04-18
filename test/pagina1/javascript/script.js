@@ -25,3 +25,27 @@ opcao3.addEventListener("mouseenter", function(){
 opcao3.addEventListener("mouseleave", function(){
     opcao3.classList.remove("animacao_opcao")
 })
+
+
+
+let texto = document.querySelector('#text')
+let tempo = 80
+let frase = 'NEVER STOP EXPLORING THE WORLD.'
+
+function showText(texto, frase, tempo){
+    let fraseDividida = frase.split('').reverse()
+    
+    let digitador = setInterval(() => {
+
+        if(!fraseDividida.length){
+            return clearInterval(digitador)
+        }
+
+        const next = fraseDividida.pop()
+
+        texto.innerHTML += next
+
+    }, tempo)
+}
+
+showText(texto, frase, tempo)
