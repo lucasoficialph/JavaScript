@@ -29,7 +29,7 @@ opcao3.addEventListener("mouseleave", function(){
 
 
 let texto = document.querySelector('#text')
-let tempo = 80
+let tempo = 100
 let frase = 'NEVER STOP EXPLORING THE WORLD.'
 
 function showText(texto, frase, tempo){

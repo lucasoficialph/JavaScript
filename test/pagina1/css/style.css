@@ -164,6 +164,7 @@ html, body {
     background-color: var(--perfilDeCor_afeter_menu);
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.459);
     overflow: hidden;
+    transition: all .3s ease-in-out;
 }
 
 #a2::before {
@@ -180,6 +181,7 @@ html, body {
     background-color: var(--perfilDeCor_afeter_menu);
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.459);
     overflow: hidden;
+    transition: all .3s ease-in-out;
 }
 
 #a3::before {
@@ -196,36 +198,25 @@ html, body {
     background-color: var(--perfilDeCor_afeter_menu);
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.459);
     overflow: hidden;
+    transition: all .3s ease-in-out;
 }
 
 #a1:hover::before {
     color: rgb(0, 153, 255);
-    transition: .3s ease-in-out;
-    animation: menuAnimado .3s normal ease-in-out;
+    height: 100%;
     animation-fill-mode: forwards;
 }
 
 #a2:hover::before {
     color: rgb(0, 153, 255);
-    transition: .3s ease-in-out;
-    animation: menuAnimado .3s normal ease-in-out;
+    height: 100%;
     animation-fill-mode: forwards;
 }
 
 #a3:hover::before {
     color: rgb(0, 153, 255);
-    transition: .3s ease-in-out;
-    animation: menuAnimado .3s normal ease-in-out;
+    height: 100%;
     animation-fill-mode: forwards;
-}
-
-@keyframes menuAnimado {
-    0%{
-        height: 2px;
-    }
-    100% {
-        height: 100%;
-    }
 }
 
 .lupa > img {
