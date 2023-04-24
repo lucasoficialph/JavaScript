@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+:root {
+    --primary-light: #8abdff;
+    --primary: #6d5dfc;
+    --primary-dark: #5b0eeb;
+    --white: #ffffff;
+    --greyLight-1: #e4ebf5;
+    --greyLight-2: #c8d0e7;
+    --greyLight-3: #bec8e4;
+    --greyDark: #9baacf;
+  }
+
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+html, body{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--greyLight-1);
+}
+
+.conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    width: 100%;
+}
+
+.component{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 3rem;
+    box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2),
+    -0.3rem -0.3rem 1.8rem var(--white);
+}
+
+.circle{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-btn{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.2rem;
+    color: var(--primary);
+    background-color: var(--greyLight-1);
+    box-shadow: 0.3rem 0.3rem 0.8rem var(--greyLight-2),
+    -0.2rem -0.2rem 0.5rem var(--white);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.visibility{
+    opacity: 0;
+}
+
+.play{
+    position: absolute;
+    transition: all .2s linear;
+}
+
+.pause{
+    position: absolute;
+    transition: all .2s linear;
+}
+
+.circle-one,
+.circle-two{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    box-shadow: 0.4rem 0.4rem 0.8rem var(--greyLight-2),
+    -0.4rem -0.4rem 0.8rem var(--white);
+    filter: blur(1px);
+}
+
+.shadow{
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2),
+    inset -0.2rem -0.2rem 0.5rem var(--white);
+}
+
+.circle-one{
+    background: linear-gradient(to bottom right,
+     var(--greyLight-2),
+     var(--white));
+     animation: circle 4s linear infinite;
+}
+
+.circle-two{
+    animation: circle 4s linear 2s infinite;
+}
+
+.paused{
+    animation-play-state: paused;
+}
+
+@keyframes circle {
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
