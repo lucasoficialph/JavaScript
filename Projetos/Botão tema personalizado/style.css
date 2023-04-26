@@ -2,6 +2,7 @@
 
 :root{
     --corNuvens: rgba(236, 236, 236, 0.11);
+    --corRaioSolares: rgba(238, 255, 0, 0.11);
 }
 
 *{
@@ -29,8 +30,8 @@ body{
 
 .botao_clima{
     position: relative;
-    height: 50px;
-    width: 110px;
+    height: 90px;
+    width: 200px;
     border-radius: 50px;
     overflow: hidden;
     border: 2px solid rgba(119, 152, 184, 0.61);
@@ -55,7 +56,7 @@ body{
 .star{
     scale: 0;
     font-size: 40%;
-    color: white;
+    color: rgb(255, 255, 255);
     transition: all 1s ease-in-out;
 }
 
@@ -96,7 +97,7 @@ body{
     left: 3%;
     transform: translate(0, -50%);
     height: 75%;
-    width: 35%;
+    width: 33%;
     z-index: 2;
     border-radius: 50%;
     background-color: rgb(253, 228, 0);
@@ -116,7 +117,7 @@ body{
     height: 100%;
     width: 100%;
     border-radius: 50%;
-    background-color: var(--corNuvens);
+    background-color: var(--corRaioSolares);
     animation: raiosSolares1 2s alternate infinite ease-in-out;
 }
 
@@ -128,7 +129,7 @@ body{
     height: 100%;
     width: 100%;
     border-radius: 50%;
-    background-color: var(--corNuvens);
+    background-color: var(--corRaioSolares);
     animation: raiosSolares2 2s alternate infinite ease-in-out;
 }
 
@@ -140,7 +141,7 @@ body{
     height: 100%;
     width: 100%;
     border-radius: 50%;
-    background-color: var(--corNuvens);
+    background-color: var(--corRaioSolares);
     animation: raiosSolares3 2s alternate infinite ease-in-out;
 }
 
