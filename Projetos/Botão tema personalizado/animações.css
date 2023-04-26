@@ -1,0 +1,75 @@
+@keyframes nuvensMover {
+    0%{
+        transform: translateX(-5px);
+    }
+    100%{
+        transform: translateX(5px);
+    }
+}
+
+@keyframes raiosSolares1 {
+    0%{
+        transform: translate(-50%, -50%) scale(1.4);
+    }
+    100%{
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+
+@keyframes raiosSolares2 {
+    0%{
+        transform: translate(-50%, -50%) scale(1.8);
+    }
+    100%{
+        transform: translate(-50%, -50%) scale(1.9);
+    }
+}
+
+@keyframes raiosSolares3 {
+    0%{
+        transform: translate(-50%, -50%) scale(2.2);
+    }
+    100%{
+        transform: translate(-50%, -50%) scale(2.3);
+    }
+}
+
+.bodyBackground{
+    background-color: rgb(17, 29, 43);
+    transition: all 1s ease-in-out;
+}
+
+.sol_Lua_Mover{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transition: all 1s ease-in-out;
+}
+
+.opacitySol{
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+}
+
+.opacityLuaStar{
+    opacity: 1;
+    scale: 1;
+    transition: all 500ms ease-in-out;
+}
+
+.opacityBackground{
+    background-color: rgb(10, 35, 56);
+    box-shadow: 
+    inset -3px -3px 10px rgba(0, 0, 0, 0.582),
+    inset 2px 2px 5px rgba(27, 97, 177, 0.521);
+    transition: all 1s ease-in-out;
+}
+
+.moverNuvens{
+    position: absolute;
+    right: 45%;
+    bottom: 0%;
+    width: 40%;
+    rotate: 0deg;
+    transition: all 1s ease-in-out;
+}

@@ -1,0 +1,268 @@
+@charset "UTF-8";
+
+:root{
+    --corNuvens: rgba(236, 236, 236, 0.11);
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(184, 218, 241);
+    user-select: none;
+    transition: all 1s ease-in-out;
+}
+
+.botao_clima{
+    position: relative;
+    height: 50px;
+    width: 110px;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 2px solid rgba(119, 152, 184, 0.61);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.144);
+    cursor: pointer;
+}
+
+.dia{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 50px;
+    background-color: rgb(64, 145, 216);
+    box-shadow: 
+    inset -3px -3px 10px rgba(0, 0, 0, 0.582),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.521);
+    z-index: 1;
+    transition: all 1s ease-in-out;
+}
+
+.star{
+    scale: 0;
+    font-size: 40%;
+    color: white;
+    transition: all 1s ease-in-out;
+}
+
+.star1{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.star2{  
+    position: absolute;
+    top: 30%;
+    left: 40%;
+}
+
+.star3{  
+    position: absolute;
+    top: 60%;
+    left: 12%;
+}
+
+.star4{  
+    position: absolute;
+    top: 5%;
+    right: 35%;
+}
+
+.star5{  
+    position: absolute;
+    bottom: 10%;
+    right: 40%;
+}
+
+.sol{
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translate(0, -50%);
+    height: 75%;
+    width: 35%;
+    z-index: 2;
+    border-radius: 50%;
+    background-color: rgb(253, 228, 0);
+    box-shadow:
+    inset 0px -5px 5px rgba(0, 0, 0, 0.377),
+    inset 0px 2px 3px rgba(255, 255, 255, 0.753),
+    1px 3px 4px rgba(0, 0, 0, 0.507);
+    filter: blur(0.3px);
+    transition: all 500ms ease-in-out;
+}
+
+.raios_Solares1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.4);
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: var(--corNuvens);
+    animation: raiosSolares1 2s alternate infinite ease-in-out;
+}
+
+.raios_Solares2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.8);
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: var(--corNuvens);
+    animation: raiosSolares2 2s alternate infinite ease-in-out;
+}
+
+.raios_Solares3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2.2);
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: var(--corNuvens);
+    animation: raiosSolares3 2s alternate infinite ease-in-out;
+}
+
+.img_nuvens{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.img_nuvensIMG{
+    position: absolute;
+    right: 3%;
+    bottom: -20%;
+    width: 65%;
+    rotate: -10deg;
+    z-index: 1;
+    animation: nuvensMover 3s infinite alternate ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.noite{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: 
+    inset -5px -5px 10px rgb(0, 0, 0),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.281);
+}
+
+.lua{
+    opacity: 0;
+    position: relative;
+    top: 50%;
+    left: 5%;
+    transform: translate(0, -50%);
+    height: 85%;
+    width: 38%;
+    z-index: 5;
+    border-radius: 50%;
+    background-color: rgb(192, 192, 191);
+    box-shadow:
+    inset 0px -5px 5px rgba(0, 0, 0, 0.377),
+    inset 0px 2px 3px rgba(255, 255, 255, 0.507),
+    1px 3px 4px rgba(0, 0, 0, 0.836);
+    filter: blur(0.3px);
+    transition: all 500ms ease-in-out;
+}
+
+.cratera1{
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    height: 26%;
+    width: 26%;
+    border-radius: 50%;
+    background-color: rgb(121, 121, 121);
+    box-shadow:
+    inset -1px -1px 1px rgba(0, 0, 0, 0.26),
+    inset 1px 1px 1px rgba(255, 255, 255, 0.486);
+}
+
+.cratera2{
+    position: absolute;
+    bottom: 12%;
+    left: 45%;
+    height: 40%;
+    width: 40%;
+    border-radius: 50%;
+    background-color: rgb(121, 121, 121);
+    box-shadow:
+    inset -1px -1px 1px rgba(0, 0, 0, 0.26),
+    inset 1px 1px 1px rgba(255, 255, 255, 0.486);
+}
+
+.cratera3{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    height: 15%;
+    width: 15%;
+    border-radius: 50%;
+    background-color: rgb(121, 121, 121);
+    box-shadow:
+    inset -1px -1px 1px rgba(0, 0, 0, 0.26),
+    inset 1px 1px 1px rgba(255, 255, 255, 0.486);
+}
+
+.raios_Lunares1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.4);
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: var(--corNuvens);
+    animation: raiosSolares1 2s alternate infinite ease-in-out;
+}
+
+.raios_Lunares2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.8);
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: var(--corNuvens);
+    animation: raiosSolares2 2s alternate infinite ease-in-out;
+}
+
+.raios_Lunares3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2.2);
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: var(--corNuvens);
+    animation: raiosSolares3 2s alternate infinite ease-in-out;
+}
